@@ -15,9 +15,15 @@ Copy the `dist` folder and change the vars.txt according this order:
 - `external.variables.txt` value, like `http://retro.gabstep.com.br:40000/dcr/v31/gamedata/external_variables.txt?`
 - DCR location, like `http://retro.gabstep.com.br:40000/dcr/v31/habbo.dcr`
 
-### IMPORTANT!
-external.texts.txt, external.variables.txt and DCR location MUST BE served as HTTP (without SSL)
+## IMPORTANT!!
+Your DCR and files like external.texts.txt, external.variables.txt, furnidata and productdata MUST BE served as HTTP (without SSL)
 
+Is strongly recommended to change your server `fuse_client.cct` to this `fuse_client.cct` (in dcr folder), to prevent browser opening in this client (conflicts in javascript calls);
+This fuse_client will only do javascript calls if external variables contains `do.javascript.calls=true`.
+
+## Recommendation
+When we use a shockwave supported browser, we can play by browser. When we use a unsupported browser (recent browsers), we need to use this client.
+The recommendation for supported browser is verify if the client supports shockwave. If no, instead of redirecting to /client_popup/install_shockwave or similar, show the `sso.ticket` client variable and instruct the user to copy and paste it to client.
 
 ## How to build
 
