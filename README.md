@@ -25,3 +25,7 @@ external.texts.txt, external.variables.txt and DCR location MUST BE served as HT
 - Double click src/projector.dir
 - Edit what you want
 - Press CTRL+SHIFT+S to build.
+
+## Credits
+
+Thank you https://github.com/Palsternakka/HabboLauncher for providing the base for this project.
