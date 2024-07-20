@@ -35,6 +35,17 @@ We use sessionStorage to store the `sso.ticket` in `client.tpl` and we show it i
 - Edit what you want
 - Press CTRL+SHIFT+S to build.
 
+## More!
+
+### How to create a Mac OS Launcher?
+You need to install the app creator (wineskin) and create a software based on you launcher files.
+
+To install the app creator (wineskin) following the instructions on https://github.com/Gcenx/WineskinServer
+
+After install the app creator, follow this video steps https://www.youtube.com/watch?v=6VSGvNfb-OQ
+
+When the "Choose Setup Executable" screen appears, use the "Copy a Folder Inside" or ""Move a Folder Inside" and select your unzipped launcher folder.
+
 ## Credits
 
 Thank you https://github.com/Palsternakka/HabboLauncher for providing the base for this project.
