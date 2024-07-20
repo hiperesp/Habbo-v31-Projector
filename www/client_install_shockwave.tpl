@@ -62,50 +62,68 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 <body id="popup" class="process-template client_error">
 <div id="container">
     <div id="content">
-
 	    <div id="process-content" class="centered-client-error">
 	       	<div id="column1" class="column">
-
 				<div class="habblet-container ">		
-						<div class="cbb clearfix orange ">
-	
-							<h2 class="title">Instruções para Jogar</h2>
-						<div class="box-content">
-    <div>
-        <p>
-            Parece que seu navegador não suporta Adobe Shockwave Player, mas não se preocupe! Você ainda pode jogar utilizando nosso launcher oficial.
-            <br>
-            <br><b>Siga os passos abaixo para jogar:</b>
-            <br>1. Faça o <b>download</b> do launcher oficial caso não tenha feito ainda
-            <br>2. Você receberá um arquivo compactado. <b>Descompacte</b> o launcher.
-            <br>3. <b>Abra o launcher</b> clicando em <b>launcher.exe</b>.
-            <br>4. Será solicitado um <b>ticket de acesso</b>. Informe o código abaixo:
-            <br><input id="sso-ticket-copy" value="" style="margin: 4px 0;text-align: center;text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;color: transparent;border: 1px solid black;width: 414px;height: 24px;">
-            <br>5. <b>Clique em jogar</b> e aproveite o jogo!
-            <br>
-            <br><b>Está com problemas para jogar?</b>
-            <br>Talvez seu ticket expirou. <b>Obtenha um novo ticket</b> e tente novamente.
-            <br>
-            <br><b>ATENÇÃO!!1 Esse ticket é privado e de uso único. Nunca envie seu ticket para ninguém.</b>
-        </p>  
-    </div>
-    <a class="new-button" href="{{ site.staticContentPath }}/launcher.zip"><b>Download do launcher</b><i></i></a>
-    <a class="new-button" id="renew-sso-ticket" href="{{ site.sitePath }}/client"><b>Obter um novo ticket</b><i></i></a>
-</div>
-
-<script>
-(function() {
-    // sso ticket from session storage
-    if(sessionStorage.getItem('sso-ticket')) {
-        document.getElementById('sso-ticket-copy').value = sessionStorage.getItem('sso-ticket');
-        sessionStorage.removeItem('sso-ticket');
-    } else {
-        window.location.href = document.getElementById('renew-sso-ticket').href;
-    }
-})();
-</script>
-	
-						
+                    <div class="cbb clearfix orange ">
+                        <div class="mac-os-help" style="display:none">
+                            <h2 class="title">Instruções para Usuarios de Mac OS</h2>
+                            <div class="box-content">
+                                <b style="color:red">Verificamos que você está usando Mac OS. É necessário alguns passos adicionais para entrar no jogo.</b>
+                                <br>
+                                <br>Para jogar no Mac OS, <b>você precisará utilizar <a href="https://github.com/Whisky-App/Whisky">Whisky</a>, <a href="https://www.winehq.org/" target="_blank">Wine</a></b> ou similares para executar o launcher Windows. <b>Recomendamos fortemente o <a href="https://github.com/Whisky-App/Whisky">Whisky</a></b>.
+                                <br>
+                                <br><b>Siga os passos abaixo para configurar:</b>
+                                <br>1. Faça o download, <b>instale e abra o <a href="https://github.com/Whisky-App/Whisky">Whisky</a>, <a href="https://www.winehq.org/" target="_blank">Wine</a></b> ou similares.
+                                <br>2. Após descompactar o launcher, utilize-o para abrir o <b>launcher.exe</b>.
+                                <br>3. <b>Siga os próximos passos</b> para jogar!
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="title">Instruções para Jogar</h2>
+                            <div class="box-content">
+                                <div>
+                                    <p>
+                                        Parece que seu navegador não suporta Adobe Shockwave Player, mas não se preocupe! Você ainda pode jogar utilizando nosso launcher oficial.
+                                        <br>
+                                        <br><b>Siga os passos abaixo para jogar:</b>
+                                        <br>1. Faça o <b>download</b> do launcher oficial caso não tenha feito ainda
+                                        <br>2. Você receberá um arquivo compactado. <b>Descompacte</b> o launcher.
+                                        <br>3. <b>Abra o launcher</b> clicando em <b>launcher.exe</b>.
+                                        <br>4. Será solicitado um <b>ticket de acesso</b>. Informe o código abaixo:
+                                        <br><input id="sso-ticket-copy" value="" style="margin: 4px 0;text-align: center;text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;color: transparent;border: 1px solid black;width: 414px;height: 24px;">
+                                        <br>5. <b>Clique em jogar</b> e aproveite o jogo!
+                                        <br>
+                                        <br><b>Está com problemas para jogar?</b>
+                                        <br>Talvez seu ticket expirou. <b>Obtenha um novo ticket</b> e tente novamente.
+                                        <br>
+                                        <br><b style="color:red">ATENÇÃO!!1 Esse ticket é privado e de uso único. Nunca envie seu ticket para ninguém.</b>
+                                    </p>  
+                                </div>
+                                <a class="new-button" href="{{ site.staticContentPath }}/launcher.zip"><b>Download do launcher</b><i></i></a>
+                                <a class="new-button" id="renew-sso-ticket" href="{{ site.sitePath }}/client"><b>Obter um novo ticket</b><i></i></a>
+                            </div>
+                        </div>
+                        <script>
+                        (function() {
+                            // sso ticket from session storage
+                            if(sessionStorage.getItem('sso-ticket')) {
+                                document.getElementById('sso-ticket-copy').value = sessionStorage.getItem('sso-ticket');
+                                sessionStorage.removeItem('sso-ticket');
+                            } else {
+                                window.location.href = document.getElementById('renew-sso-ticket').href;
+                            }
+                        })();
+                        (function() {
+                            if(!window.navigator) return;
+                            if(!window.navigator.userAgent) return;
+                            if(window.navigator.userAgent.toLowerCase().indexOf("macintosh")==-1 && window.navigator.userAgent.toLowerCase().indexOf("mac os")==-1) return;
+                            // we are in mac os!
+                            document.querySelectorAll(".mac-os-help").style.display = null;
+                        })();
+                        </script>
 					</div>
 				</div>
 				<script type="text/javascript">if (!$(document.body).hasClassName('process-template')) { Rounder.init(); }</script>
