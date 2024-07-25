@@ -111,7 +111,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
                             // sso ticket from session storage
                             if(sessionStorage.getItem('sso-ticket')) {
                                 const sw1 = "connection.info.host=retro.gabstep.com.br;connection.info.port=40001";
-                                const sw2 = "connecion.mus.host=retro.gabstep.com.br;connection.mus.port=40002";
+                                const sw2 = "connection.mus.host=retro.gabstep.com.br;connection.mus.port=40002";
                                 const sw3 = "site.url=https://retro.gabstep.com.br";
                                 const sw4 = "url.prefix=https://retro.gabstep.com.br";
                                 const sw5 = "external.texts.txt=http://retro.gabstep.com.br:40000/dcr/v31/gamedata/external_texts.txt?";
